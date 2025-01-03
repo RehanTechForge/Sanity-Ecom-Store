@@ -31,14 +31,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 const items = [
-  { label: "Home V1", link: "/" },
-  { label: "Home V2", link: "/home-v1" },
-  { label: "About V1", link: "/about" },
-  { label: "About V2", link: "/about-v2" },
-  { label: "Cart V2", link: "/cart-v2" },
-  { label: "Shop V1", link: "/shop" },
-  { label: "Shop V2", link: "/shop-v2" },
-  { label: "Shop V3", link: "/shop-v3" },
+  { label: "Home", link: "/" },
+  { label: "About", link: "/about" },
+  { label: "Shop", link: "/shop" },
 ];
 
 const slideIn = {
@@ -97,9 +92,7 @@ const TopHeader = () => {
               <DropdownMenuItem>
                 Signed in as {user?.primaryEmailAddress?.emailAddress}
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link href="/profile">Profile</Link>
-              </DropdownMenuItem>
+
               <DropdownMenuItem>
                 <Link href="/orders">Orders</Link>
               </DropdownMenuItem>
@@ -168,9 +161,6 @@ const TopHeader = () => {
                       <p>
                         Signed in as {user?.primaryEmailAddress?.emailAddress}
                       </p>
-                      <Link href="/profile" className="mt-2">
-                        <Button variant="outline">Profile</Button>
-                      </Link>
                       <Link href="/orders" className="mt-2">
                         <Button variant="outline">Orders</Button>
                       </Link>

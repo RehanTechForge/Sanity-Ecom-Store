@@ -32,7 +32,9 @@ export default function OrderList({ orders }: OrderListProps) {
       {orders.map((order) => (
         <Card key={order._id}>
           <CardHeader>
-            <CardTitle>Order #{order.orderId}</CardTitle>
+            <CardTitle className="text-lg sm:text-base truncate">
+              Order #{order.orderId}
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <p>Date: {new Date(order.date).toLocaleDateString()}</p>
